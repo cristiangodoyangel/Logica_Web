@@ -34,15 +34,28 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 20px;
   }
   
   .social-icon {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: white;
-    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   
   .social-icon:hover {
     color: #00c853;
+    transform: scale(1.2);
+  }
+  
+  .btn-volver {
+    border: 2px solid white;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .btn-volver:hover {
+    background: white;
+    color: #15172e;
+    transform: scale(1.05);
   }
   
