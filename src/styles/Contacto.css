@@ -1,0 +1,48 @@
+.contacto-section {
+    background: #15172e !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-custom {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .input-custom:focus {
+    border-color: #00c853;
+    box-shadow: 0px 0px 8px rgba(0, 200, 83, 0.8);
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #00c853;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    color: #00c853;
+  }
+  

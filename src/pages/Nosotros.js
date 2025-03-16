@@ -10,9 +10,11 @@ const Nosotros = () => {
         <section className="text-center mb-5">
           <h1 className="main-title">Sobre Nosotros</h1>
           <p className="lead">
-            En <span className="text-logica-green">LOGICA</span>, transformamos ideas en soluciones digitales con innovación y pasión.
-            Nuestra misión es proporcionar software de alta calidad que impulse el crecimiento de nuestros clientes.
+            En <span className="text-logica-green">LOGICA.NET</span>, transformamos ideas en soluciones digitales de alto impacto.  
+            Nos especializamos en desarrollo de software, inteligencia artificial, infraestructura en la nube y optimización empresarial.  
+            Nuestra misión es ayudar a empresas e instituciones a innovar y crecer mediante tecnología avanzada.
           </p>
+          
         </section>
 
         <div className="divider2"></div>
@@ -24,25 +26,34 @@ const Nosotros = () => {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h4>2021</h4>
-                <p>Fundamos LOGICA con el objetivo de crear software innovador para pequeñas y medianas empresas.</p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-content">
-                <h4>2022</h4>
-                <p>Ampliamos nuestro equipo y comenzamos a desarrollar aplicaciones móviles y soluciones en la nube.</p>
+                <p>Comenzamos desarrollando sitios web con PHP y MySQL, adquiriendo experiencia en soluciones empresariales y e-commerce.</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <h4>2023</h4>
-                <p>Lanzamos nuestra plataforma de inteligencia artificial aplicada a la educación y al sector empresarial.</p>
+                <p>Nos especializamos en tecnologías modernas como .NET, Java y React, desarrollando software empresarial, aplicaciones móviles e infraestructura en la nube.</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <h4>2024</h4>
-                <p>Seguimos creciendo y consolidándonos como líderes en desarrollo de software a medida.</p>
+                <p>Completamos la formación en <strong>Oracle Next Education (ONE)</strong> con especialización en <strong>Backend Java</strong>, ampliando nuestra experiencia en soluciones escalables y robustas.
+                <p className="text-left">
+            Puedes ver nuestras certificaciones en nuestro perfil de <a href="https://www.linkedin.com/in/cristian-godoy-angel/details/certifications/" target="_blank" rel="noopener noreferrer" className="text-logica-green">LinkedIn</a>.
+          </p></p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h4>2024</h4>
+                <p>Desarrollamos <strong>Inventario360</strong>, un sistema avanzado de gestión de bodegas y logística. También comenzamos la integración de IA en soluciones educativas y empresariales.</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h4>2025</h4>
+                <p>Lanzamos <strong>LOGICA.NET</strong>, una plataforma para ayudar a empresas en innovación, desarrollo de marca, automatización y optimización digital.</p>
               </div>
             </div>
           </div>
@@ -58,7 +69,7 @@ const Nosotros = () => {
               <Card className="info-card">
                 <Card.Body>
                   <h4 className="text-logica-green">Misión</h4>
-                  <p>Desarrollar soluciones tecnológicas innovadoras que impulsen el éxito de nuestros clientes.</p>
+                  <p>Impulsar la transformación digital de empresas e instituciones a través de software eficiente, seguro e innovador.</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -66,7 +77,7 @@ const Nosotros = () => {
               <Card className="info-card">
                 <Card.Body>
                   <h4 className="text-logica-green">Visión</h4>
-                  <p>Ser una empresa líder en desarrollo de software, reconocida por nuestra calidad e innovación.</p>
+                  <p>Ser referentes en Chile y Latinoamérica en desarrollo de software, inteligencia artificial e innovación empresarial.</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -74,7 +85,7 @@ const Nosotros = () => {
               <Card className="info-card">
                 <Card.Body>
                   <h4 className="text-logica-green">Valores</h4>
-                  <p>Compromiso, transparencia, innovación y pasión por la tecnología.</p>
+                  <p>Innovación, excelencia, compromiso, ética profesional y pasión por la tecnología.</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -86,26 +97,22 @@ const Nosotros = () => {
         {/* Nuestro equipo */}
         <section className="mb-5">
           <h2 className="h3 text-center text-white mb-4">Nuestro Equipo</h2>
-          <Row className="text-center">
-            <Col md={4}>
-              <Card className="team-card">
-                <Card.Img variant="top" src="/equipo/ceo.jpg" className="team-img" />
-                <Card.Body>
-                  <h5 className="text-logica-green">Cristian Godoy</h5>
-                  <p>CEO & Full Stack Developer</p>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="team-card">
-                <Card.Img variant="top" src="/equipo/desarrollador.jpg" className="team-img" />
-                <Card.Body>
-                  <h5 className="text-logica-green">Victor Alcayaga</h5>
-                  <p>Desarrollador Backend</p>
-                </Card.Body>
-              </Card>
-            </Col>
-           
+          <Row className="justify-content-center text-center"> {/* Centrando los cuadros */}
+            {[
+              { img: "/equipo/ceo.jpg", name: "Cristian Andrés Godoy", role: "Fundador & CEO | Full Stack Developer", skills: "Especialista en .NET, Java, React, SQL Server, AWS y optimización digital." },
+              { img: "/equipo/desarrollador.jpg", name: "Victor Alcayaga", role: "Desarrollador Backend", skills: "Especialista en C#, Flutter, JavaScript, React, MySQL, MongoDB, AWS." }
+            ].map((team, index) => (
+              <Col md={4} key={index} className="d-flex justify-content-center">
+                <Card className="team-card">
+                  <Card.Img variant="top" src={team.img} className="team-img" />
+                  <Card.Body>
+                    <h5 className="text-logica-green">{team.name}</h5>
+                    <p>{team.role}</p>
+                    <p>{team.skills}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </section>
       </Container>

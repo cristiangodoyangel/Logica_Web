@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
 import TechCarousel from '../TechCarousel';
+import BlinkingCursor from '../BlinkingCursor';
 
 function Home() {
   return (
@@ -76,7 +77,10 @@ function Home() {
 
       {/* Sección de Mockups */}
       <section className="mockup-container">
-        <h2 className="mockup-title">Proyectos Realizados</h2>
+      <h2 className="mockup-title">
+  Proyectos_Realizados:<span style={{ display: 'inline-block' }}><BlinkingCursor /></span>
+</h2>
+
         <div className="mockup-wrapper">
           <div className="mockup">
             <img src="/webs/m360.png" alt="www.motors360.cl" />
@@ -115,7 +119,7 @@ function Home() {
         <p className="mb-4 text-white">
           Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
         </p>
-        <Button variant="logica" size="lg">Contáctanos Ahora</Button>
+        <a href="contacto" className="btn btn-logica btn-lg">Contáctanos Ahora</a>
       </section>
     </Container>
   );

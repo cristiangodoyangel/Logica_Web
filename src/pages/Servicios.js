@@ -7,39 +7,48 @@ function Servicios() {
     <Container className="flex-grow-1 py-5">
       <h2 className="h3 text-center text-white mb-4">Nuestros Servicios</h2>
       <div className="row g-4">
-        <div className="col-md-4">
-          <Card className="h-100 text-center p-4">
-            <Card.Body>
-              <i className="bi bi-code-square service-icon"></i>
-              <Card.Title className="h4 mb-3 text-logica-green">Desarrollo Web</Card.Title>
-              <Card.Text className="text-white">
-                Sitios web modernos y aplicaciones web que destacan tu marca en el mundo digital.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-md-4">
-          <Card className="h-100 text-center p-4">
-            <Card.Body>
-              <i className="bi bi-phone service-icon"></i>
-              <Card.Title className="h4 mb-3 text-logica-green">Apps Móviles</Card.Title>
-              <Card.Text className="text-white">
-                Aplicaciones nativas y multiplataforma que conectan con tus usuarios donde estén.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-md-4">
-          <Card className="h-100 text-center p-4">
-            <Card.Body>
-              <i className="bi bi-gear service-icon"></i>
-              <Card.Title className="h4 mb-3 text-logica-green">Software a Medida</Card.Title>
-              <Card.Text className="text-white">
-                Soluciones personalizadas que optimizan tus procesos y aumentan tu productividad.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
+        {[
+          {
+            icon: 'bi-code-square',
+            title: 'Desarrollo Web y Software',
+            text: 'Creamos aplicaciones web y sistemas a medida con tecnologías modernas como .NET, Java y React, asegurando eficiencia y escalabilidad.',
+          },
+          {
+            icon: 'bi-phone',
+            title: 'Apps Móviles',
+            text: 'Desarrollamos aplicaciones móviles nativas y multiplataforma optimizadas para Android y iOS, con diseños intuitivos y alto rendimiento.',
+          },
+          {
+            icon: 'bi-graph-up',
+            title: 'SEO y Marketing Digital',
+            text: 'Mejoramos tu visibilidad en Google con estrategias avanzadas de posicionamiento y optimización para aumentar la conversión de clientes.',
+          },
+          {
+            icon: 'bi-cloud',
+            title: 'Infraestructura en la Nube',
+            text: 'Implementamos y optimizamos soluciones en AWS, Oracle Cloud y Azure, garantizando seguridad, disponibilidad y escalabilidad.',
+          },
+          {
+            icon: 'bi-box-seam',
+            title: 'Inventario y Logística',
+            text: 'Desarrollamos sistemas de gestión de bodega y logística 100% funcionales, como Inventario360, optimizando el control de stock y materiales.',
+          },
+          {
+            icon: 'bi-bank',
+            title: 'Sistemas Robustos y Escalables',
+            text: 'Creamos soluciones flexibles que crecen con tu negocio, permitiéndote empezar con pocos usuarios y funcionalidades, ampliándose a medida que lo necesites.',
+          },
+        ].map((service, index) => (
+          <div className="col-md-4" key={index}>
+            <Card className="h-100 text-center p-4">
+              <Card.Body>
+                <i className={`bi ${service.icon} service-icon`}></i>
+                <Card.Title className="h4 mb-3 text-logica-green">{service.title}</Card.Title>
+                <Card.Text className="text-white">{service.text}</Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
       </div>
 
       <div className="divider2"></div>
@@ -48,48 +57,16 @@ function Servicios() {
       <section className="py-5 bg-dark-separator section-spacing">
         <h2 className="h3 text-center text-white mb-4">¿Por qué elegirnos?</h2>
         <div className="row text-center">
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Experiencia</h4>
-            <p className="text-white">Más de 4 años en desarrollo web, móvil y software.</p>
-          </div>
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Seguridad</h4>
-            <p className="text-white">Implementamos las mejores prácticas en ciberseguridad.</p>
-          </div>
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Escalabilidad</h4>
-            <p className="text-white">Soluciones pensadas para crecer con tu negocio.</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="divider2"></div>
-
-      {/* Sección de Mockups */}
-      <section className="mockup-container">
-        <h2 className="mockup-title">Proyectos Realizados</h2>
-        <div className="mockup-wrapper">
-          <div className="mockup">
-            <img src="/webs/m360.png" alt="www.motors360.cl" />
-            <div className="mockup-info">
-              <h5>Motors 360</h5>
-              <p>Plataforma de compra y venta de vehículos con integración a sistemas de cotización.</p>
+          {[
+            { title: 'Experiencia', text: 'Más de 10 años en desarrollo de software, aplicaciones web y soluciones digitales.' },
+            { title: 'Optimización', text: 'Diseñamos sistemas eficientes y personalizables para mejorar la productividad de empresas e iglesias.' },
+            { title: 'Soporte Continuo', text: 'Brindamos mantenimiento, actualizaciones y mejoras constantes en todos nuestros proyectos.' },
+          ].map((item, index) => (
+            <div className="col-md-4" key={index}>
+              <h4 className="text-logica-green">{item.title}</h4>
+              <p className="text-white">{item.text}</p>
             </div>
-          </div>
-          <div className="mockup">
-            <img src="/webs/pmt.png" alt="www.pmtintegra.cl" />
-            <div className="mockup-info">
-              <h5>PMT Integra</h5>
-              <p>Solución para gestión y mantenimiento de flotas industriales y servicios integrales.</p>
-            </div>
-          </div>
-          <div className="mockup">
-            <img src="/webs/app.png" alt="Aplicación Web" />
-            <div className="mockup-info">
-              <h5>Gestión de Activos</h5>
-              <p>Aplicación web para el manejo eficiente de activos empresariales en tiempo real.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -106,7 +83,7 @@ function Servicios() {
         <p className="mb-4 text-white">
           Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
         </p>
-        <Button variant="logica" size="lg">Contáctanos Ahora</Button>
+        <a href="contacto" className="btn btn-logica btn-lg">Contáctanos Ahora</a>
       </section>
     </Container>
   );
