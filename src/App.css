@@ -1,0 +1,244 @@
+body {
+  background-color: #15172e !important;
+  color: #e0e0e0 !important;
+  font-family: Arial, sans-serif;
+}
+
+.app-wrapper {
+  background-color: #15172e;
+  color: #e0e0e0 !important;
+}
+
+.navbar-custom {
+  background-color: #15172e !important;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.1);
+  padding: 1rem 0;
+  color: #e0e0e0 !important;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container img {
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+}
+
+.text-logica-green {
+  color: #0d9353 !important;
+}
+
+.bg-logica-green {
+  background-color: #0d9353 !important;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #0d9353 !important;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.card {
+  background-color: rgba(224, 224, 224, 0.05) !important;
+  border: 1px solid rgba(224, 224, 224, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  color: #e0e0e0 !important;
+}
+
+.card:hover {
+  transform: translateY(-0px);
+  box-shadow: 0 10px 20px rgba(13, 147, 83, 0.1);
+  border: 1px solid #0d9353 !important;
+}
+
+.btn-logica {
+  background-color: #0d9353 !important;
+  border-color: #0d9353 !important;
+  color: #15172e !important;
+  font-weight: 600 !important;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-logica:hover {
+  background-color: #0a7442 !important;
+  border-color: #0a7442 !important;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d9353 !important;
+}
+
+.text-muted {
+  color: #e0e0e0 !important;
+}
+
+.bg-dark-logica {
+  background-color: #15172e !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #0d9353 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e0e0e0 !important;
+}
+
+.main-title {
+  font-size: 4rem !important;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: #e0e0e0 !important;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.footer {
+  background-color: rgba(224, 224, 224, 0.05);
+  color: #e0e0e0 !important;
+}
+
+.footer p {
+  color: #e0e0e0 !important;
+}
+
+.bg-light-logica {
+  background-color: #f5f5f5  !important; /* Fondo más claro */
+  padding: 50px 0; /* Espaciado arriba y abajo */
+}
+
+.bg-dark-separator {
+  background-color: #0c0d23 !important; /* Azul más claro que el fondo principal */
+  padding: 60px 0; /* Espaciado superior e inferior */
+}
+
+.section-spacing {
+  margin-bottom: 90px; /* Separación entre secciones */
+}
+
+.divider {
+  height: 2px;
+  width: 80%;
+  background-color: #0d9353; /* Verde Logica */
+  margin: 50px auto;
+  border-radius: 12px;
+}
+
+
+.divider2 {
+  height: 2px;
+  width: 80%;
+  background-color: #f5f5f5; /* Verde Logica */
+  margin: 50px auto;
+  border-radius: 12px;
+}
+
+
+.mockup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 100px 0;
+  background-color: #0c0d23;
+  text-align: center;
+}
+
+.mockup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.mockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1f30;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #7b7b7b;
+  box-shadow: 0px 5px 20px rgba(254, 254, 254, 0.3);
+  transition: transform 0.3s ease;
+  width: 350px; /* Tamaño fijo */
+  text-align: center;
+}
+
+.mockup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.mockup:hover {
+  transform: scale(1.15);
+  border: 3px solid #3e7d3a;
+  box-shadow: 0px 5px 20px rgba(30, 255, 5, 0.3);
+}
+
+.mockup-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: #0c0d23;
+  color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.mockup-info h5 {
+  margin: 0;
+  color: #0d9353;
+}
+
+.mockup-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

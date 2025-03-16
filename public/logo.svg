@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="#1A1B26"/>
+  <g transform="translate(150, 125)">
+    <!-- Símbolo < en blanco -->
+    <path d="M0 20 l80 0 l40 30 l-40 30 l-80 0 z" fill="white"/>
+    
+    <!-- Símbolo > en verde -->
+    <path d="M120 20 l80 0 l0 60 l-80 0 l-40 -30 l40 -30 z" fill="#00FF7F"/>
+  </g>
+  
+  <!-- Texto LÓGICA -->
+  <text x="150" y="350" font-size="72" font-family="Arial, sans-serif" font-weight="bold" letter-spacing="4" fill="white">LÓGIC<tspan fill="#00FF7F">A</tspan></text>
+</svg>
