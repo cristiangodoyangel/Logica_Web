@@ -272,6 +272,26 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 76px; /* Altura del navbar + padding extra */
 }
 
+/* Estilos para el botón de volver */
+.back-button-container {
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-volver {
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: #21233b;
+  border-top: 1px solid rgba(224, 224, 224, 0.1);
+  color: #e0e0e0;
+  margin-top: auto;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
