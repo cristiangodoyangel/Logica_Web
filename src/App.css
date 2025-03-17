@@ -14,6 +14,8 @@ body {
   border-bottom: 1px solid rgba(224, 224, 224, 0.1);
   padding: 1rem 0;
   color: #e0e0e0 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1030;
 }
 
 .logo-container {
@@ -266,8 +268,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.2);
 }
 
-
-
+.main-content {
+  padding-top: 76px; /* Altura del navbar + padding extra */
+}
 
 @keyframes fadeInUp {
   from {
