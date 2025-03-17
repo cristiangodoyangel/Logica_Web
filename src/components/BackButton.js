@@ -11,10 +11,10 @@ function BackButton() {
       <Button 
         variant="outline-light" 
         size="sm" 
-        className="btn-volver" 
+        className="btn-volver-small" 
         onClick={() => navigate("/")}
       >
-        <FaArrowLeft className="me-2" /> Volver al Home
+        <FaArrowLeft className="me-1" /> Volver al inicio
       </Button>
     </div>
   );

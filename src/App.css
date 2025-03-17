@@ -274,14 +274,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilos para el botón de volver */
 .back-button-container {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   position: relative;
   z-index: 1;
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
-.btn-volver {
-  font-size: 0.9rem !important;
-  padding: 0.5rem 1rem !important;
+.btn-volver-small {
+  font-size: 0.8rem !important;
+  padding: 0.3rem 0.8rem !important;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.btn-volver-small:hover {
+  opacity: 1;
 }
 
 /* Estilos para el footer */

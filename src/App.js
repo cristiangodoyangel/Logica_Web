@@ -37,22 +37,22 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servicios" element={
-              <>
-                <BackButton />
+              <div className="d-flex flex-column min-vh-100">
                 <Servicios />
-              </>
+                <BackButton />
+              </div>
             } />
             <Route path="/nosotros" element={
-              <>
-                <BackButton />
+              <div className="d-flex flex-column min-vh-100">
                 <Nosotros />
-              </>
+                <BackButton />
+              </div>
             } />
             <Route path="/contacto" element={
-              <>
-                <BackButton />
+              <div className="d-flex flex-column min-vh-100">
                 <Contacto />
-              </>
+                <BackButton />
+              </div>
             } />
           </Routes>
           
