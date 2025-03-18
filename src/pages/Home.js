@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import TechCarousel from '../TechCarousel';
 import BlinkingCursor from '../BlinkingCursor';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap';
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import '../styles/Contacto.css';
 

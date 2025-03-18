@@ -11,7 +11,7 @@ const Nosotros = () => {
           <h1 className="main-title">Sobre Nosotros</h1>
           <p className="lead">
             En <span className="text-logica-green">LÓGICA</span>, transformamos ideas en soluciones digitales de alto impacto.  
-            Nos especializamos en desarrollo de software, inteligencia artificial, infraestructura en la nube y optimización empresarial.  
+            Nos especializamos en desarrollo de software, integración de IA, infraestructura en la nube y optimización empresarial.  
             Nuestra misión es ayudar a empresas e instituciones a innovar y crecer mediante tecnología avanzada.
           </p>
           

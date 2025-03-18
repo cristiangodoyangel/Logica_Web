@@ -8,7 +8,6 @@ import Servicios from './pages/Servicios';
 import Nosotros from './pages/Nosotros';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer';
-import BackButton from './components/BackButton';
 
 function App() {
   return (
