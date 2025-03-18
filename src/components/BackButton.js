@@ -7,7 +7,7 @@ function BackButton() {
   const navigate = useNavigate();
 
   return (
-    <div className="back-button-container">
+    <div className="back-button-fixed">
       <Button 
         variant="outline-light" 
         size="sm" 

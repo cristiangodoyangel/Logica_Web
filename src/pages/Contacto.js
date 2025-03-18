@@ -1,130 +1,136 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Container, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
+import { FaEnvelope, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import '../styles/Contacto.css';
 
 function Contacto() {
-  const navigate = useNavigate(); // Para redirigir al home
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    mensaje: ''
-  });
+  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value
-    });
-  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const formData = new FormData(event.target);
     
-    // Crear el cuerpo del correo
-    const mailtoLink = `mailto:cristian@weblogica.cl?subject=Contacto desde Web - ${formData.nombre}&body=Nombre: ${formData.nombre}%0D%0AEmail: ${formData.email}%0D%0AMensaje:%0D%0A${formData.mensaje}`;
-    
-    // Abrir el cliente de correo predeterminado
-    window.location.href = mailtoLink;
-    
-    // Limpiar el formulario
-    setFormData({
-      nombre: '',
-      email: '',
-      mensaje: ''
-    });
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/cristian@weblogica.cl', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        event.target.reset();
+        setShowModal(true);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <div className="contacto-section py-5">
-      <Container>
-        <h2 className="h3 text-center text-white mb-4">Contáctanos</h2>
+    <>
+      <div className="contacto-section py-5">
+        <Container>
+          <h2 className="h3 text-center text-white mb-4">Contáctanos</h2>
 
-        <Row className="justify-content-center">
-          {/* Información de contacto */}
-          <Col md={5} className="mb-4">
-            <Card className="contact-card">
-              <Card.Body>
-                <h4 className="text-logica-green text-center mb-4">Información de Contacto</h4>
-                <p><FaEnvelope className="icon" /> Email: <a href="mailto:cristian@weblogica.cl" className="text-white">cristian@weblogica.cl</a></p>
-                <p><FaPhoneAlt className="icon" /> Teléfono: <a href="tel:+56957209793" className="text-white">+56 9 5720 9793</a></p>
-                <p><FaWhatsapp className="icon" /> WhatsApp: <a href="https://wa.me/56957209793" target="_blank" rel="noopener noreferrer" className="text-white">+ 56 9 5720 9793</a></p>
-              </Card.Body>
-            </Card>
-          </Col>
+          <Row className="justify-content-center">
+            {/* Información de contacto */}
+            <Col md={5} className="mb-4">
+              <Card className="contact-card">
+                <Card.Body>
+                  <h4 className="text-logica-green text-center mb-4">Información de Contacto</h4>
+                  <p><FaEnvelope className="icon" /> Email: <a href="mailto:cristian@weblogica.cl" className="text-white">cristian@weblogica.cl</a></p>
+                  <p><FaPhoneAlt className="icon" /> Teléfono: <a href="tel:+56957209793" className="text-white">+56 9 5720 9793</a></p>
+                  <p><FaWhatsapp className="icon" /> WhatsApp: <a href="https://wa.me/56957209793" target="_blank" rel="noopener noreferrer" className="text-white">+ 56 9 5720 9793</a></p>
+                </Card.Body>
+              </Card>
+            </Col>
 
-          {/* Formulario de contacto */}
-          <Col md={6}>
-            <Card className="contact-card">
-              <Card.Body>
-                <h4 className="text-logica-green text-center mb-4">Déjanos un mensaje</h4>
-                <Form onSubmit={handleSubmit}>
-                  <Form.Group controlId="nombre">
-                    <Form.Label>Nombre</Form.Label>
-                    <Form.Control 
-                      type="text" 
-                      placeholder="Ingresa tu nombre" 
-                      className="input-custom"
-                      value={formData.nombre}
-                      onChange={handleChange}
-                      required
-                    />
-                  </Form.Group>
+            {/* Formulario de contacto */}
+            <Col md={6}>
+              <Card className="contact-card">
+                <Card.Body>
+                  <h4 className="text-logica-green text-center mb-4">Déjanos un mensaje</h4>
+                  <form onSubmit={handleSubmit}>
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://weblogica.cl" />
+                    
+                    <div className="mb-3">
+                      <label htmlFor="nombre" className="form-label">Nombre</label>
+                      <input 
+                        type="text" 
+                        className="form-control input-custom" 
+                        id="nombre"
+                        name="nombre"
+                        required 
+                      />
+                    </div>
 
-                  <Form.Group controlId="email" className="mt-3">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control 
-                      type="email" 
-                      placeholder="Ingresa tu email" 
-                      className="input-custom"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </Form.Group>
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label">Email</label>
+                      <input 
+                        type="email" 
+                        className="form-control input-custom" 
+                        id="email"
+                        name="email"
+                        required 
+                      />
+                    </div>
 
-                  <Form.Group controlId="mensaje" className="mt-3">
-                    <Form.Label>Mensaje</Form.Label>
-                    <Form.Control 
-                      as="textarea" 
-                      rows={3} 
-                      placeholder="Escribe tu mensaje" 
-                      className="input-custom"
-                      value={formData.mensaje}
-                      onChange={handleChange}
-                      required
-                    />
-                  </Form.Group>
+                    <div className="mb-3">
+                      <label htmlFor="mensaje" className="form-label">Mensaje</label>
+                      <textarea 
+                        className="form-control input-custom" 
+                        id="mensaje"
+                        name="mensaje"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
 
-                  <Button variant="logica" size="lg" type="submit" className="mt-3 w-100">
-                    Enviar Mensaje
-                  </Button>
-                </Form>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+                    <Button 
+                      variant="logica" 
+                      size="lg" 
+                      type="submit" 
+                      className="w-100"
+                      disabled={isLoading}
+                    >
+                      {isLoading ? 'Enviando...' : 'Enviar Mensaje'}
+                    </Button>
+                  </form>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
-        {/* Redes Sociales */}
-        <div className="social-links text-center mt-4">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>
-          <a href="https://www.linkedin.com/in/cristian-godoy-angel" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedinIn /></a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaTwitter /></a>
-          <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub /></a>
-        </div>
+          <div className="divider2"></div>
+        </Container>
+      </div>
 
-        <div className="divider2"></div>
-
-        {/* Botón Volver al Home */}
-        <div className="text-center mt-4">
-          <Button variant="outline-light" size="lg" className="btn-volver" onClick={() => navigate("/")}>
-            <FaArrowLeft className="me-2" /> Volver al Home
+      {/* Modal de confirmación */}
+      <Modal 
+        show={showModal} 
+        onHide={() => setShowModal(false)} 
+        centered 
+        dialogClassName="modal-dark"
+        size="sm"
+      >
+        <Modal.Header closeButton className="bg-dark">
+          <Modal.Title className="text-white h5">¡Mensaje Enviado!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="bg-dark text-white">
+          <p className="mb-0">Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.</p>
+        </Modal.Body>
+        <Modal.Footer className="bg-dark">
+          <Button variant="logica" size="sm" onClick={() => setShowModal(false)}>
+            Cerrar
           </Button>
-        </div>
-      </Container>
-    </div>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
 

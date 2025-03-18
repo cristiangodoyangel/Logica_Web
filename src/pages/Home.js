@@ -57,45 +57,71 @@ function Home() {
       <div className="divider2"></div>
 
       {/* Sección "Por qué elegirnos" */}
-      <section className="py-5 bg-dark-separator section-spacing">
-        <h2 className="h3 text-center text-white mb-4">¿Por qué elegirnos?</h2>
-        <div className="row text-center">
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Experiencia</h4>
-            <p className="text-white">Más de 4 años en desarrollo web, móvil y software.</p>
-          </div>
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Seguridad</h4>
-            <p className="text-white">Implementamos las mejores prácticas en ciberseguridad.</p>
-          </div>
-          <div className="col-md-4">
-            <h4 className="text-logica-green">Escalabilidad</h4>
-            <p className="text-white">Soluciones pensadas para crecer con tu negocio.</p>
+      <section className="py-4 bg-dark-separator">
+        <div className="container bg-dark-separator">
+          <h2 className="h3 text-center text-white mb-3">¿Por qué elegir Lógica?</h2>
+          
+          <div className="row justify-content-center why-choose-section px-4">
+            <div className="col-md-4 why-choose-item text-center">
+              <h4 className="text-logica-green d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d9151" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-laptop me-2">
+                  <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
+                </svg> 
+                Experiencia
+              </h4>
+              <p className="mt-2 text-white">Más de 3 años desarrollando soluciones tecnológicas innovadoras. Nos especializamos en tecnologías web modernas e inteligencia artificial para optimizar procesos empresariales.</p>
+            </div>
+
+            <div className="col-md-4 why-choose-item text-center">
+              <h4 className="text-logica-green d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d9151" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check me-2">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg> 
+                Seguridad
+              </h4>
+              <p className="mt-2 text-white">Implementamos las mejores prácticas en ciberseguridad y desarrollo seguro. Protegemos tus datos y garantizamos la integridad de tus sistemas empresariales.</p>
+            </div>
+
+            <div className="col-md-4 why-choose-item text-center">
+              <h4 className="text-logica-green d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d9151" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-maximize-2 me-2">
+                  <polyline points="15 3 21 3 21 9"/>
+                  <polyline points="9 21 3 21 3 15"/>
+                  <line x1="21" x2="14" y1="3" y2="10"/>
+                  <line x1="3" x2="10" y1="21" y2="14"/>
+                </svg> 
+                Escalabilidad
+              </h4>
+              <p className="mt-2 text-white">Diseñamos arquitecturas flexibles y modulares que evolucionan con tu negocio. Nuestras soluciones se adaptan al crecimiento y nuevos requerimientos.</p>
+            </div>
           </div>
         </div>
       </section>
 
+      <div className="divider2"></div>
+
       {/* Sección de Mockups */}
       <section className="mockup-container">
-      <h2 className="mockup-title">
-  Proyectos_Realizados:<span style={{ display: 'inline-block' }}><BlinkingCursor /></span>
-</h2>
+        <h2 className="mockup-title">
+          Proyectos_Realizados: <span>   </span> <span style={{ display: 'inline-block' }}><BlinkingCursor /></span>
+        </h2>
 
         <div className="mockup-wrapper">
-          <div className="mockup">
+          <a href="https://www.motors360.cl" target="_blank" rel="noopener noreferrer" className="mockup">
             <img src="/webs/m360.png" alt="www.motors360.cl" />
             <div className="mockup-info">
               <h5>Motors 360</h5>
-              <p>Plataforma de compra y venta de vehículos con integración a sistemas de cotización.</p>
+              <p>Página web para empresa del rubro del equipamiento para la gran minería.</p>
             </div>
-          </div>
-          <div className="mockup">
+          </a>
+          <a href="https://www.pmtintegra.cl" target="_blank" rel="noopener noreferrer" className="mockup">
             <img src="/webs/pmt.png" alt="www.pmtintegra.cl" />
             <div className="mockup-info">
               <h5>PMT Integra</h5>
-              <p>Solución para gestión y mantenimiento de flotas industriales y servicios integrales.</p>
+              <p>Pagina web corporativa, brochure y asesoría en rrss de pmt integra, optimización de seo  y visibilidad en la gran minería.</p>
             </div>
-          </div>
+          </a>
           <div className="mockup">
             <img src="/webs/app.png" alt="Aplicación Web" />
             <div className="mockup-info">

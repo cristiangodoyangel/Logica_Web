@@ -23,6 +23,7 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
+                <Nav.Link as={Link} to="/">Inicio</Nav.Link>
                 <Nav.Link as={Link} to="/servicios">Servicios</Nav.Link>
                 <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
                 <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
@@ -37,23 +38,18 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servicios" element={
-              <div className="d-flex flex-column min-vh-100">
-                <Servicios />
+              <>
                 <BackButton />
-              </div>
+                <Servicios />
+              </>
             } />
             <Route path="/nosotros" element={
-              <div className="d-flex flex-column min-vh-100">
+              <>
+                <BackButton />
                 <Nosotros />
-                <BackButton />
-              </div>
+              </>
             } />
-            <Route path="/contacto" element={
-              <div className="d-flex flex-column min-vh-100">
-                <Contacto />
-                <BackButton />
-              </div>
-            } />
+            <Route path="/contacto" element={<Contacto />} />
           </Routes>
           
           {/* Footer en todas las páginas */}

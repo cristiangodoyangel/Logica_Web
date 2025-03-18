@@ -43,7 +43,7 @@ body {
 
 .service-icon {
   font-size: 2.5rem;
-  color: #0d9353 !important;
+  color: hwb(151 5% 43%) !important;
   margin-bottom: 1.5rem;
   display: block;
 }
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-title {
-  font-size: 4rem !important;
+  font-size: 3rem !important;
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
@@ -195,22 +195,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   border: 3px solid #7b7b7b;
   box-shadow: 0px 5px 20px rgba(254, 254, 254, 0.3);
-  transition: transform 0.3s ease;
-  width: 350px; /* Tamaño fijo */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  width: 350px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mockup:hover {
+  transform: translateY(-10px);
+  border-color: #0d9353;
 }
 
 .mockup img {
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.mockup:hover {
-  transform: scale(1.15);
-  border: 3px solid #3e7d3a;
-  box-shadow: 0px 5px 20px rgba(30, 255, 5, 0.3);
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .mockup-info {
@@ -273,12 +274,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Estilos para el botón de volver */
-.back-button-container {
-  padding: 0.5rem 1rem;
-  position: relative;
-  z-index: 1;
-  margin-top: auto;
-  margin-bottom: 1rem;
+.back-button-fixed {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1030;
 }
 
 .btn-volver-small {
@@ -309,4 +309,121 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Estilos para la sección Por qué elegirnos */
+.why-choose-section {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.why-choose-item {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.why-choose-item p {
+  margin: 0.75rem auto;
+  max-width: 90%;
+}
+
+.why-choose-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 100%;
+  width: 1px;
+  background-color: rgb(116, 116, 116);
+  opacity: 0.3;
+}
+
+.mockup-preview {
+  position: relative;
+  cursor: pointer;
+}
+
+.preview-thumb {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.preview-hover {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  background: #21233b;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.preview-full {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.mockup-preview:hover .preview-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-102%);
+}
+
+.preview-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #21233b;
+}
+
+/* Estilos para el modal */
+.modal-dark .modal-content {
+  background-color: #15172e;
+  min-width: 400px;
+  border: 1px solid #383b4e;
+}
+
+.modal-dark .modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #383b4e;
+}
+
+.modal-dark .modal-body {
+  padding: 1.5rem 1rem;
+}
+
+.modal-dark .modal-footer {
+  padding: 0.75rem;
+  border-top: 1px solid #383b4e;
+}
+
+.modal-dark .close {
+  color: #e0e0e0;
+}
+
+.modal-dark .close:hover {
+  color: #383b4e;
+}
+
+.navbar-custom .nav-link {
+  color: #e0e0e0 !important;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0d9353 !important;
 }
