@@ -8,9 +8,7 @@ function Home() {
     <Container className="flex-grow-1 py-5">
       {/* Hero Section */}
       <header className="text-center mb-5">
-        <div className="logo-container mb-4">
-          <img src="/logica.png" height="130" alt="Logica Logo Grande" className="mb-4" />
-        </div>
+        
         <h1 className="main-title">Innovación y Desarrollo</h1>
       </header>
 
@@ -138,6 +136,10 @@ function Home() {
       <TechCarousel />
 
       <div className="divider2"></div>
+
+      <div className="logo-container mb-4">
+          <img src="/logica.png" height="130" alt="Logica Logo Grande" className="mb-4" />
+        </div>
 
       {/* Llamado a la Acción */}
       <section className="text-center py-5" id="contacto">

@@ -18,7 +18,7 @@ function App() {
         <Navbar variant="dark" expand="lg" className="navbar-custom" fixed="top">
           <Container>
             <Navbar.Brand as={Link} to="/">
-              <img src="/logica.png" height="40" className="me-2" alt="Logica Logo" />
+              <img src="/logica.png" height="60" className="me-2" alt="Logica Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -34,21 +34,10 @@ function App() {
         
         {/* Contenedor principal con padding-top para compensar el navbar fijo */}
         <div className="main-content pt-5">
-          {/* BackButton en todas las páginas excepto Home */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/servicios" element={
-              <>
-                <BackButton />
-                <Servicios />
-              </>
-            } />
-            <Route path="/nosotros" element={
-              <>
-                <BackButton />
-                <Nosotros />
-              </>
-            } />
+            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
           

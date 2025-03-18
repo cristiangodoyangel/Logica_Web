@@ -10,7 +10,7 @@ const Nosotros = () => {
         <section className="text-center mb-5">
           <h1 className="main-title">Sobre Nosotros</h1>
           <p className="lead">
-            En <span className="text-logica-green">LOGICA.NET</span>, transformamos ideas en soluciones digitales de alto impacto.  
+            En <span className="text-logica-green">LÓGICA</span>, transformamos ideas en soluciones digitales de alto impacto.  
             Nos especializamos en desarrollo de software, inteligencia artificial, infraestructura en la nube y optimización empresarial.  
             Nuestra misión es ayudar a empresas e instituciones a innovar y crecer mediante tecnología avanzada.
           </p>
@@ -53,7 +53,7 @@ const Nosotros = () => {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h4>2025</h4>
-                <p>Lanzamos <strong>LOGICA.NET</strong>, una plataforma para ayudar a empresas en innovación, desarrollo de marca, automatización y optimización digital.</p>
+                <p>Lanzamos <strong>LÓGICA</strong>, una plataforma para ayudar a empresas en innovación, desarrollo de marca, automatización y optimización digital.</p>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Nosotros = () => {
           <h2 className="h3 text-center text-white mb-4">Nuestro Equipo</h2>
           <Row className="justify-content-center text-center"> {/* Centrando los cuadros */}
             {[
-              { img: "/equipo/ceo.jpg", name: "Cristian Andrés Godoy", role: "Fundador & CEO | Full Stack Developer", skills: "Especialista en .NET, Java, React, SQL Server, AWS y optimización digital." },
+              { img: "/equipo/ceo.jpg", name: "Cristian Andrés Godoy", role: "Full Stack Developer", skills: "Especialista en .NET, Java, React, SQL Server, AWS y optimización digital." },
               { img: "/equipo/desarrollador.jpg", name: "Victor Alcayaga", role: "Desarrollador Backend", skills: "Especialista en C#, Flutter, JavaScript, React, MySQL, MongoDB, AWS." }
             ].map((team, index) => (
               <Col md={4} key={index} className="d-flex justify-content-center">
