@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-vh-100 d-flex flex-column bg-dark-logica">
+      <div className="min-vh-100 d-flex flex-column">
         {/* Navbar - Ahora fuera de las rutas y con fixed="top" */}
         <Navbar variant="dark" expand="lg" className="navbar-custom" fixed="top">
           <Container>

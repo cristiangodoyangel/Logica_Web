@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color:#0a0f1c" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0ff" stop-opacity="0.2"/>
+    </linearGradient>
+    <style>
+      .line-main {
+        stroke: url(#blueGradient);
+        stroke-width: 2;
+        fill: none;
+      }
+      .line-bg {
+        stroke: #0a5a9c;
+        stroke-opacity: 0.1;
+        stroke-width: 1;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <!-- Faint background lines -->
+  <g>
+    <!-- Vertical lines -->
+    <path class="line-bg" d="M100 0 V1080"/>
+    <path class="line-bg" d="M300 0 V1080"/>
+    <path class="line-bg" d="M500 0 V1080"/>
+    <path class="line-bg" d="M700 0 V1080"/>
+    <path class="line-bg" d="M900 0 V1080"/>
+    <path class="line-bg" d="M1100 0 V1080"/>
+    <path class="line-bg" d="M1300 0 V1080"/>
+    <path class="line-bg" d="M1500 0 V1080"/>
+    <path class="line-bg" d="M1700 0 V1080"/>
+    <path class="line-bg" d="M1900 0 V1080"/>
+
+    <!-- Horizontal lines -->
+    <path class="line-bg" d="M0 100 H1920"/>
+    <path class="line-bg" d="M0 300 H1920"/>
+    <path class="line-bg" d="M0 500 H1920"/>
+    <path class="line-bg" d="M0 700 H1920"/>
+    <path class="line-bg" d="M0 900 H1920"/>
+    <path class="line-bg" d="M0 1080 H1920"/>
+
+    <!-- Diagonals for texture -->
+    <path class="line-bg" d="M0 100 L1920 1080"/>
+    <path class="line-bg" d="M0 300 L1620 1080"/>
+    <path class="line-bg" d="M300 0 L1920 900"/>
+  </g>
+
+  <!-- Main animated circuit path -->
+  <path id="megaPath" class="line-main"
+    d="
+      M100 200
+      H400 V300 H150 V450 H500 V600
+      H300 V800 H700 V500 H1000 V300
+      H600 V100 H1100 V400 H1300 V200
+      H900 V650 H1500 V800 H1200 V1000
+      H1600 V600 H1800 V400 H1300 V700
+      H1000 V900 H800 V1050 H600 V850
+      H400 V1000 H300 V750 H200 V950
+      H100
+    " />
+
+  <!-- Glowing animated light -->
+  <circle r="6" fill="#0ff">
+    <animateMotion dur="16s" repeatCount="indefinite">
+      <mpath href="#megaPath" />
+    </animateMotion>
+  </circle>
+</svg>
