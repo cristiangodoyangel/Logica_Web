@@ -136,7 +136,7 @@ function Contacto() {
         {/* Formulario */}
         <Row className="justify-content-center">
           <Col md={8} lg={6}>
-            <div className="contact-form-wrapper bg-dark-separator p-4 rounded-3">
+            <div className="contact-form-wrapper bg-card p-4 rounded-3">
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <input
