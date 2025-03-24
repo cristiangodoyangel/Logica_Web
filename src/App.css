@@ -817,3 +817,76 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(13, 147, 83, 0.2) !important;
   transform: translateY(-5px);
 }
+
+/* Estilos para la página de contacto */
+.contact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(13, 147, 83, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.contact-card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.contact-card-link:hover .contact-card {
+  background: rgba(13, 147, 83, 0.1);
+  border-color: rgba(13, 147, 83, 0.3);
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--logica-green);
+  transition: all 0.3s ease;
+}
+
+.contact-card-link:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-form-wrapper {
+  border: 1px solid rgba(13, 147, 83, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-custom {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(13, 147, 83, 0.1) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  transition: all 0.3s ease;
+}
+
+.input-custom:focus {
+  box-shadow: 0 0 0 3px rgba(13, 147, 83, 0.2) !important;
+  border-color: var(--logica-green) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.input-custom::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-logica {
+  background: var(--logica-green);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-logica:hover:not(:disabled) {
+  background: #0fb766;
+  transform: translateY(-2px);
+}
+
+.btn-logica:disabled {
+  background: rgba(13, 147, 83, 0.5);
+  cursor: not-allowed;
+}

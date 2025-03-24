@@ -4,8 +4,10 @@ import TechCarousel from '../TechCarousel';
 
 function Servicios() {
   return (
+    
     <Container className="flex-grow-1 py-5">
-      <h2 className="h3 text-center text-white mb-4">Nuestros Servicios</h2>
+      
+      <h1 className="h2 text-center text-white mb-4">Nuestros Servicios</h1>
       <div className="row g-4">
         {[
           {
@@ -102,13 +104,22 @@ function Servicios() {
 
       <div className="divider2"></div>
 
-      {/* Llamado a la Acción */}
-      <section className="text-center py-5" id="contacto">
-        <h2 className="h3 mb-4 text-white">¿Listo para dar el siguiente paso?</h2>
-        <p className="mb-4 text-white">
-          Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.
-        </p>
-        <a href="contacto" className="btn btn-logica btn-lg">Contáctanos Ahora</a>
+            {/* Sección de Contacto */}
+            <section className="contact-section bg-dark-separator py-8">
+        <div className="container text-center">
+          <div className="logo-container mb-4">
+          <img src="/logica.png" height="130" alt="Logica Logo Grande" className="mb-4" />
+          </div>
+          <h2 className="h3 text-white mb-3">¿Listo para dar el siguiente paso?</h2>
+          <p className="text-white-50 mb-5">Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
+          <a href="/contacto" className="btn btn-contact-cta">
+            Contáctanos Ahora
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ms-2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </section>
     </Container>
   );

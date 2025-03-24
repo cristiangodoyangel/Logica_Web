@@ -13,8 +13,9 @@ function Home() {
       </header>
 
       {/* Sección de Servicios */}
-      <section className="py-5" id="servicios">
+      <section className="services-section bg-dark-separator py-8">
         <div className="container">
+          
           <h2 className="h3 text-center text-white mb-4">Nuestros Servicios</h2>
           <div className="row g-4">
             <div className="col-md-4 card-wrapper">
@@ -64,6 +65,7 @@ function Home() {
         </div>
       </section>
 
+      <div className="divider2"></div>
 
       {/* Sección "Por qué elegirnos" */}
       <section className="py-5">
@@ -124,6 +126,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <div className="divider2"></div>
 
            {/* Sección de Proyectos */}
       <section className="projects-section bg-dark-separator py-8">
@@ -190,9 +194,10 @@ function Home() {
         </div>
       </section>
 
-      
-{/* Sección de Contacto */}
-<section className="contact-section bg-dark-separator py-8">
+      <div className="divider2"></div>
+
+      {/* Sección de Contacto */}
+      <section className="contact-section bg-dark-separator py-8">
         <div className="container text-center">
           <div className="logo-container mb-4">
           <img src="/logica.png" height="130" alt="Logica Logo Grande" className="mb-4" />
@@ -208,9 +213,7 @@ function Home() {
           </a>
         </div>
       </section>
-   
 
-      
       <div className="divider2"></div>
 
       {/* Sección Tecnologías con Carrusel */}
@@ -218,9 +221,6 @@ function Home() {
 
       <div className="divider2"></div>
 
-      
-
-     
     </Container>
   );
 }
